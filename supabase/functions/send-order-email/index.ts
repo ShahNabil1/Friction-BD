@@ -79,7 +79,7 @@ const handler = async (req: Request): Promise<Response> => {
         
         if (productData) {
           // Build the product URL
-          const baseUrl = "https://fashion-elegance.lovable.app";
+          const baseUrl = "https://www.frictionbd.com";
           reviewLink = `${baseUrl}/${productData.category}/${productData.subcategory}/${productData.slug}`;
           console.log("Review link:", reviewLink);
         }
