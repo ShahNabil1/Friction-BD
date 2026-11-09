@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bubu Lifestyle Design System
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Friction theme — bold, black/white with red accents
+       Primary: #1a1a1a (black) · Accent: #ec2027 (red) · Background: #ffffff */
+
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Friction Black primary - #1a1a1a */
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Friction Red accent - #ec2027 */
+    --accent: 358 84% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Red destructive / CTA - #ec2027 */
+    --destructive: 358 84% 53%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 10%;
+
+    /* Brand semantic tokens - Friction Black */
+    --brand: 0 0% 10%;
+    --brand-foreground: 0 0% 100%;
+
+    /* Friction Red - #ec2027 */
+    --bubu-red: 358 84% 53%;
+    --bubu-red-foreground: 0 0% 100%;
+
+    /* Highlight (mapped to Friction Red for brand cohesion) */
+    --bubu-green: 358 84% 53%;
+    --bubu-green-foreground: 0 0% 100%;
+
+    /* Neutral light for soft accents */
+    --bubu-sky: 0 0% 92%;
+    --bubu-sky-foreground: 0 0% 10%;
+
+    /* Amber warning */
+    --bubu-amber: 38 92% 55%;
+    --bubu-amber-foreground: 0 0% 10%;
+
+    /* Deep secondary (black) */
+    --bubu-teal: 0 0% 10%;
+    --bubu-teal-foreground: 0 0% 100%;
+
+    /* Legacy tokens mapped to Friction palette */
+    --gold: 358 84% 53%;
+    --gold-foreground: 0 0% 100%;
+
+    --maroon: 0 0% 10%;
+    --maroon-foreground: 0 0% 100%;
+
+    --midnight: 0 0% 10%;
+    --midnight-foreground: 0 0% 100%;
+
+    /* Radii & effects */
+    --radius: 1rem;
+
+    --shadow-soft: 0 8px 24px -12px hsl(0 0% 0% / 0.12);
+    --shadow-elegant: 0 20px 40px -20px hsl(0 0% 0% / 0.20);
+
+    --gradient-gold: linear-gradient(90deg, hsl(358 84% 60%), hsl(358 84% 53%), hsl(358 84% 45%));
+
+    /* Hero: subtle white gradient */
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 96%));
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 0% 10%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 358 84% 53%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 10%;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 358 84% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 358 84% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 358 84% 53%;
+
+    --brand: 358 84% 53%;
+    --brand-foreground: 0 0% 100%;
+
+    --bubu-red: 358 84% 53%;
+    --bubu-red-foreground: 0 0% 100%;
+
+    --bubu-green: 358 84% 53%;
+    --bubu-green-foreground: 0 0% 100%;
+
+    --bubu-sky: 0 0% 20%;
+    --bubu-sky-foreground: 0 0% 98%;
+
+    --bubu-amber: 38 92% 60%;
+    --bubu-amber-foreground: 0 0% 10%;
+
+    --bubu-teal: 0 0% 10%;
+    --bubu-teal-foreground: 0 0% 100%;
+
+    --gold: 358 84% 53%;
+    --gold-foreground: 0 0% 100%;
+
+    --maroon: 358 84% 53%;
+    --maroon-foreground: 0 0% 100%;
+
+    --midnight: 0 0% 10%;
+    --midnight-foreground: 0 0% 98%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 10%));
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 358 84% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 358 84% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Hahmlet", ui-serif, Georgia, serif;
+  }
+}
+
+/* Cart shake animation */
+@keyframes cart-shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-12deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(-8deg);
+  }
+  60% {
+    transform: rotate(6deg);
+  }
+  75% {
+    transform: rotate(-4deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+.animate-cart-shake {
+  animation: cart-shake 0.5s ease-in-out;
+}
+
+@layer utilities {
+  /* Scroll reveal: add className="reveal" then toggle "is-visible" */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 600ms ease, transform 600ms ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Print helpers */
+  @media print {
+    .print-hidden {
+      display: none !important;
+    }
+
+    body {
+      background: white !important;
+    }
+
+    .receipt {
+      margin: 0 auto;
+    }
+
+    .receipt-a4 {
+      width: 210mm;
+    }
+
+    .receipt-thermal {
+      width: 80mm;
+    }
+
+    @page {
+      margin: 12mm;
+    }
+  }
+}
